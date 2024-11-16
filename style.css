@@ -1,3 +1,4 @@
+/* Base styling */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -34,10 +35,10 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    transition: transform 0.3s ease-in-out;
     text-align: center;
-    position: relative;
     overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
 }
 
 /* Spinning effect */
@@ -66,16 +67,26 @@ body {
     text-decoration: none;
 }
 
-footer {
-    background: #4a4a4a;
-    color: white;
-    padding: 10px;
-    text-align: center;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+.like-btn {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    margin-top: 10px;
 }
 
-footer p {
-    margin: 0;
+/* Liked state */
+.like-btn.liked {
+    color: red;
 }
+
+/* Styling for product options */
+.product-size {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background: #4a4a4a
