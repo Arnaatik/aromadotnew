@@ -3,27 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AromaDot</title>
+    <title>Наши Продукты - AromaDot</title>
     <link rel="stylesheet" href="/static/css/styles.css">
-    <script src="/static/js/main.js" defer></script>
 </head>
 <body>
-    <div class="hero-section">
-        <h1>Добро пожаловать в AromaDot</h1>
-        <p>
-            Почувствуйте магию каждого аромата. Здесь ваши мечты обретают запах, 
-            а воспоминания — незабываемую глубину. Откройте для себя мир изысканных парфюмов, 
-            который подчеркнет вашу уникальность.
-        </p>
-    </div>
+    <header class="header">
+        <h1>Наши Продукты</h1>
+        <p>Выберите идеальный аромат для себя или в подарок.</p>
+    </header>
 
-    <div class="perfume-circle">
-        {% for perfume in perfumes %}
-        <div class="circle-item">
-            <img src="/static/images/{{ perfume.image }}" alt="{{ perfume.name }}">
-            <p>{{ perfume.name }}</p>
+    <main class="product-list">
+        <div class="product-card spinning" id="perfume1">
+            <a href="/product/montale">
+                <img src="/static/images/montale.jpg" alt="Montale Chocolate Greedy">
+                <h2>Montale Chocolate Greedy</h2>
+            </a>
         </div>
-        {% endfor %}
-    </div>
+        <div class="product-card spinning" id="perfume2">
+            <a href="/product/prada">
+                <img src="/static/images/prada.jpg" alt="Prada L'Homme">
+                <h2>Prada L'Homme</h2>
+            </a>
+        </div>
+        <div class="product-card spinning" id="perfume3">
+            <a href="/product/jeanpaul">
+                <img src="/static/images/jeanpaul.jpg" alt="Jean Paul Gaultier Le Male Elixir">
+                <h2>Jean Paul Gaultier Le Male Elixir</h2>
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 AromaDot. Все права защищены.</p>
+    </footer>
+
+    <script src="/static/js/products.js"></script>
 </body>
 </html>
