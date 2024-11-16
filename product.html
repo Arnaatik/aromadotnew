@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Наши Продукты - AromaDot</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <script src="/static/js/products.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <h1>Наши Продукты</h1>
+        <p>Выберите идеальный аромат для себя или в подарок.</p>
+    </header>
+
+    <main>
+        <div class="product-container">
+            {% for perfume in perfumes %}
+            <div class="product-card">
+                <img src="/static/images/{{ photo_2024-10-04_16-07-45.jpg }}" alt="{{ Montale Chocolate Greedy }}" class="product-image">
+                <h2>{{ Montale Chocolate Greedy }}</h2>
+                <p>Цена: {{ perfume.price }}₸</p>
+                <button class="like-btn" onclick="toggleLike(this)">❤️</button>
+            </div>
+            {% endfor %}
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 AromaDot. Все права защищены.</p>
+    </footer>
+</body>
+</html>
