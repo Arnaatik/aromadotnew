@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AromaDot</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>AromaDot</h1>
+        <nav>
+            <a href="index.html">Домашняя</a>
+            <a href="likes.html">Мои Избранные</a>
+            <a href="contact.html">Контакты</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Добро пожаловать в AromaDot!</h2>
+        <p>Исследуйте коллекцию роскошных образцов духов.</p>
+        <div id="products">
+            <div class="product">
+                <img src="chanel.jpg" alt="Chanel No. 5">
+                <h3>Chanel No. 5</h3>
+                <button onclick="likeProduct('Chanel No. 5', '2ml')">❤️ 2ml</button>
+                <button onclick="likeProduct('Chanel No. 5', '5ml')">❤️ 5ml</button>
+            </div>
+            <div class="product">
+                <img src="dior.jpg" alt="Dior Sauvage">
+                <h3>Dior Sauvage</h3>
+                <button onclick="likeProduct('Dior Sauvage', '3ml')">❤️ 3ml</button>
+                <button onclick="likeProduct('Dior Sauvage', '10ml')">❤️ 10ml</button>
+            </div>
+        </div>
+    </main>
+    <footer>© 2024 AromaDot</footer>
+    <script src="script.js"></script>
+</body>
+</html>
