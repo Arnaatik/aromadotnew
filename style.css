@@ -1,103 +1,87 @@
+/* Общие стили */
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
-    background-color: #333; /* Grey background */
-    color: #fff;
-    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #3e3e3e, #1e1e1e);
+    color: #f5f5f5;
+    text-align: center;
+}
+
+/* Герой секция */
+.hero-section {
+    padding: 40px 20px;
+    margin-bottom: 50px;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #f7d1b5;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #ddd;
+}
+
+/* Круг парфюмов */
+.perfume-circle {
     position: relative;
-}
-
-.background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    overflow: hidden;
-}
-
-.floating-circle {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    background: rgba(255, 255, 255, 0.1);
+    width: 400px;
+    height: 400px;
+    margin: 50px auto;
     border-radius: 50%;
-    animation: float 10s infinite ease-in-out;
-}
-
-.floating-circle:nth-child(1) {
-    top: 20%;
-    left: 10%;
-    animation-duration: 12s;
-}
-
-.floating-circle:nth-child(2) {
-    top: 40%;
-    left: 60%;
-    animation-duration: 8s;
-}
-
-.floating-circle:nth-child(3) {
-    top: 70%;
-    left: 30%;
-    animation-duration: 15s;
-}
-
-@keyframes float {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-50px);
-    }
-}
-.product-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-}
-
-.product-card {
-    perspective: 1000px;
-    width: 200px;
-    height: 300px;
-}
-
-.card-inner {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    transform-style: preserve-3d;
-    transition: transform 0.6s ease;
-}
-
-.card-inner:hover {
-    transform: rotateY(180deg);
-}
-
-.card-front, .card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
+    animation: spin 15s linear infinite;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 10px;
-    overflow: hidden;
 }
 
-.card-front {
-    background: #444;
-    color: #fff;
+.circle-item {
+    position: absolute;
+    width: 100px;
+    text-align: center;
 }
 
-.card-back {
-    background: #555;
-    color: #fff;
-    transform: rotateY(180deg);
+.circle-item img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.circle-item:hover img {
+    transform: scale(1.3);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.3);
+}
+
+.circle-item:nth-child(1) {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -100%);
+}
+
+.circle-item:nth-child(2) {
+    top: 50%;
+    right: 0;
+    transform: translate(50%, -50%);
+}
+
+.circle-item:nth-child(3) {
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 100%);
+}
+
+/* Анимация вращения */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
